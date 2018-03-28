@@ -1,5 +1,5 @@
 before_install:
-  - sudo apt-get install texlive
+  - sudo apt-get install texlive texlive-xetex
 script:
   - xelatex cv.tex
 
