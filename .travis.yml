@@ -1,0 +1,5 @@
+install:
+  - apt-get install xetex
+script:
+  - xelatex cv.tex
+
