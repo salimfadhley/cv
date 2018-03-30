@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-mkidr -p out
-
+mkdir -p out
 xelatex -output-directory=./out cv.tex
