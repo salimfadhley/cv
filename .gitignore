@@ -221,3 +221,4 @@ TSWLatexianTemp*
 *.pdf
 out
 idea/workspace.xml
+.idea/*.xml
