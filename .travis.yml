@@ -1,5 +1,11 @@
 before_install:
-  - sudo apt-get install texlive texlive-xetex
+- sudo apt-get install texlive texlive-xetex
 script:
-  - xelatex cv.tex
-
+- xelatex cv.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: Xxbtw9Pm/TbfIU9gAw1nnmwjCk5nVwX3apKoTWyDJFEFUKJdSsRqiRj3cYUqT03a97KJVV37MLgEo8qfPli03iQYa1hxYkBFviPz9ez/CkhK6aOAClKxLOH34Hsf4tcSC7J8ai+WA08xfWwXBp7e69EykxzaWBB8xdWTghjRbVmZq0BYNeTY3zjpprJqdcxErcJlO31WsvL0P47vUlz87dDIE/CaTleyDc67I2YfTuP/enyjkBPguuFYvD3ZxrU4ShA5mmqaaitoz02x5/++n+/3n9sQIwSBQnK1x/XJ2mSWmt7Bmv2LUt2Dt3qUUirrpYrIJ4h27fRsd1wRtlzxf4LFAkXMe194HuAzj/ey7mrqKg0NFXdhrAcRuXMxpvlgNq4YGYCuPLzQhyHLQO1TroA4eQUjnzIkWoZiUsnYt1vGF6xH+mZOebW++KcSQtIlDpo9ML30PQiAdh3IjfFKSIya98D+jG3JeXaTeorptdIRR3b3kEUwTbYJsCL36AQlCIQ4sP5+wyvXDW5TUzApk2ZA9FHP897vSIP24hHx4OUJbg8q5E5j3a2V4+ckMRTiq58SgHuxH4lDolU0yy2XFLehIGCEZCdIkiyeTqSL058v1HfebdE286p0fZydu9g9zjzxJbt5HldE1u+NNogtGaf55KFGEE+J7OP9X+uFm88=
+  file: cv.pdf
+  on:
+    repo: salimfadhley/cv
