@@ -7,5 +7,7 @@ if [ -n "$GITHUB_API_KEY" ]; then
     git checkout -b gh-pages
     git add .
     git -c user.name='salimfadhley' -c user.email='salimfadhley@gmail.com' commit -m init
-    git push -f -q https://salimfadhley:$GITHUB_API_KEY@github.com/salimfadhley/cv gh-pages &2>/dev/null
+    git push -f -q https://salimfadhley:$GITHUB_API_KEY@github.com/salimfadhley/cv.git gh-pages &2>/dev/null
+else
+    echo "GITHUB_API_KEY not set"
 fi
