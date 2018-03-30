@@ -2,4 +2,4 @@ before_install:
 - sudo ./install.sh
 script:
 - ./build.sh
-after_success: publish.sh
+after_success: ./publish.sh
