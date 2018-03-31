@@ -222,3 +222,6 @@ TSWLatexianTemp*
 out
 idea/workspace.xml
 .idea/*.xml
+cv.4tc
+cv.tmp
+cv.xref
