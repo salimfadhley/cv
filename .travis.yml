@@ -2,8 +2,8 @@ language: python
 services:
   - docker
 before_install:
-  - docker pull thomasweise/texlive
+  - docker pull moss/xelatex
 script:
  - mkdir out
- - docker run -t -v `pwd`/out:/tmp/out thomasweise/texlive xelatex -output-directory=/tmp/out cv.tex
+ - docker run -t -v `pwd`/out:/tmp/out moss/xelatex xelatex -output-directory=/tmp/out cv.tex
 after_success: ./publish.sh
