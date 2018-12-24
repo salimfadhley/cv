@@ -5,5 +5,5 @@ before_install:
   - docker pull moss/xelatex
 script:
  - mkdir out
- - docker run -t -v `pwd`/out:/tmp/out moss/xelatex xelatex -output-directory=/tmp/out cv.tex
+ - docker run -t -v `pwd`/out:/tmp/out -v `pwd`/src:/src moss/xelatex xelatex -output-directory=/tmp/out /src/cv.tex
 after_success: ./publish.sh
