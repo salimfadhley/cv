@@ -4,5 +4,5 @@ services:
 before_install:
   - docker pull thomasWeise/texlive
 script:
-- docker run -t -v ./out:/tmp/out thomasWeise/texlive xelatex -output-directory=/tmp/out cv.tex
+- docker run -t -v ./out:/tmp/out thomasweise/texlive xelatex -output-directory=/tmp/out cv.tex
 after_success: ./publish.sh
