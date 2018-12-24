@@ -2,7 +2,7 @@ language: python
 services:
   - docker
 before_install:
-  - docker pull thomasWeise/texlive
+  - docker pull thomasweise/texlive
 script:
 - docker run -t -v ./out:/tmp/out thomasweise/texlive xelatex -output-directory=/tmp/out cv.tex
 after_success: ./publish.sh
