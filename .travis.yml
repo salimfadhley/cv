@@ -1,5 +1,8 @@
+language: python
+services:
+  - docker
 before_install:
-- sudo ./install.sh
+  - docker pull thomasWeise/texlive
 script:
-- ./build.sh
+- docker run -t -v ./out:/tmp/out thomasWeise/texlive xelatex -output-directory=/tmp/out cv.tex
 after_success: ./publish.sh

@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-mkdir -p out
-xelatex -output-directory=./out cv.tex
+mkdir -p /tmp/out
+xelatex -output-directory=/tmp/out cv.tex
