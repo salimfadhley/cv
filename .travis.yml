@@ -1,5 +1,9 @@
+language: python
+services:
+  - docker
 before_install:
-- sudo ./install.sh
+  - docker pull moss/xelatex
 script:
-- ./build.sh
+ - mkdir out
+ - docker run -t -v `pwd`/out:/tmp/out -v `pwd`/src:/src -w "/src" moss/xelatex xelatex -output-directory=/tmp/out /src/cv.tex
 after_success: ./publish.sh
