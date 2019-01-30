@@ -12,10 +12,12 @@
 
     \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip % Horizontal line after name; adjust line thickness by changing the '1pt'
 
+{% if include_confidential %}
     \moveleft.5\hoffset\centerline{66 Nightingale Road} % Your address
     \moveleft.5\hoffset\centerline{London, N228PP}
     \moveleft.5\hoffset\centerline{+44 7973 710574}
     \moveleft.5\hoffset\centerline{salimfadhley@gmail.com}
+{% endif %}
     \moveleft.5\hoffset\centerline{https://github.com/salimfadhley}
 
     %----------------------------------------------------------------------------------------
