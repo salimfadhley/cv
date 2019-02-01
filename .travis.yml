@@ -2,11 +2,9 @@ language: python
 services:
   - docker
 before_install:
-  - sudo pip install docker-compose --upgrade
   - docker pull moss/xelatex
   - docker pull vikingco/jinja2cli:latest
 script:
  - mkdir out
  - ./build.sh
-
 after_success: ./publish.sh
