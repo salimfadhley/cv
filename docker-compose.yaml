@@ -13,6 +13,7 @@ services:
     build:
       context: .
       target: xelatex
+    entrypoint: ["xelatex"]
 
   jinja2cli:
     <<: *base-dev
