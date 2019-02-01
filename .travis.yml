@@ -5,5 +5,8 @@ before_install:
   - docker pull moss/xelatex
 script:
  - mkdir out
- - docker run -t -v `pwd`/out:/tmp/out -v `pwd`/src:/src -w "/src" moss/xelatex xelatex -output-directory=/tmp/out /src/cv.tex
+ - docker-compose run jinja2cli cv.tex.j2 confidential.yaml > ./tex/cv_confidential.tex
+ - docker-compose run jinja2cli cv.tex.j2 public.yaml > ./tex/cv.tex
+ - docker-compose run xelatex -output-directory=/project/out cv_confidential.tex
+ - docker-compose run xelatex -output-directory=/project/out cv.tex
 after_success: ./publish.sh
