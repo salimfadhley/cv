@@ -7,14 +7,13 @@ on GitHub.
 Important URLs
 --------------
 
-My CV
-^^^^^
+### My CV
+
 
 * [Compiled CV](https://salimfadhley.github.io/cv/cv.pdf)
 * [Compiled CV containing personal information](https://salimfadhley.github.io/cv/cv_confidential.pdf)
 
-Building this CV
-^^^^^^^^^^^^^^^^
+### Building this CV
 
 * [Travis Job](https://travis-ci.org/salimfadhley/cv)
 * [Source Code](https://github.com/salimfadhley/cv)
