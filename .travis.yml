@@ -2,7 +2,9 @@ language: python
 services:
   - docker
 before_install:
+  - sudo pip install docker-compose
   - docker pull moss/xelatex
+  - docker pull vikingco/jinja2cli:latest
 script:
  - mkdir out
  - docker-compose run jinja2cli cv.tex.j2 confidential.yaml > ./tex/cv_confidential.tex
