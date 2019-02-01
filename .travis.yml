@@ -7,9 +7,6 @@ before_install:
   - docker pull vikingco/jinja2cli:latest
 script:
  - mkdir out
- - docker build .
- - docker run -v `pwd`:/project -w /project/src vikingco/jinja2cli:latest cv.tex.j2 confidential.yaml > ./tex/cv_confidential.tex
- - docker run -v `pwd`:/project -w /project/src vikingco/jinja2cli:latest cv.tex.j2 public.yaml > ./tex/cv.tex
- - docker run -v `pwd`:/project -w /project/src moss/xelatex -output-directory=/project/out cv_confidential.tex
- - docker run -v `pwd`:/project -w /project/src moss/xelatex -output-directory=/project/out cv.tex
+ - ./build.sh
+
 after_success: ./publish.sh
